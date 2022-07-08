@@ -198,6 +198,6 @@ move() {
 	fi
 }
 
-repo
+#repo
 suckless
 #move
