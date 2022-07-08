@@ -1,0 +1,3 @@
+move dunstrc to ~/.config/dunst/
+
+move fontawesome/ to ~/.local/share/icons/

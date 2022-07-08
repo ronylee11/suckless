@@ -1,0 +1,13 @@
+--- config.def.h
++++ config.def.h
+@@ -162,8 +161,8 @@ static MouseShortcut mshortcuts[] = {
+ 
+ MouseKey mkeys[] = {
+ 	/* button               mask            function        argument */
+-	{ Button4,              ShiftMask,      kscrollup,      {.i =  mousescrollincrement} },
+-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  mousescrollincrement} },
++	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
++	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
+ };
+ 
+ /* Internal keyboard shortcuts. */

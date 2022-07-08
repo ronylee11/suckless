@@ -1,0 +1,9 @@
+--- config.def.h
++++ config.def.h
+@@ -10,6 +10,3 @@ static const char *colorname[NUMCOLS] = {
+ 
+ /* treat a cleared input like a wrong password (color) */
+ static const int failonclear = 1;
+-
+-/* time in seconds before the monitor shuts down */
+-static const int monitortime = 5;

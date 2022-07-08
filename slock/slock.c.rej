@@ -1,0 +1,28 @@
+--- slock.c
++++ slock.c
+@@ -15,7 +15,6 @@
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <X11/extensions/Xrandr.h>
+-#include <X11/extensions/dpms.h>
+ #include <X11/keysym.h>
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+@@ -307,7 +306,6 @@ main(int argc, char **argv) {
+ 	const char *hash;
+ 	Display *dpy;
+ 	int s, nlocks, nscreens;
+-	CARD16 standby, suspend, off;
+ 
+ 	ARGBEGIN {
+ 	case 'v':
+@@ -385,9 +369,5 @@ main(int argc, char **argv) {
+ 	/* everything is now blank. Wait for the correct password */
+ 	readpw(dpy, &rr, locks, nscreens, hash);
+ 
+-	/* reset DPMS values to inital ones */
+-	DPMSSetTimeouts(dpy, standby, suspend, off);
+-	XSync(dpy, 0);
+-
+ 	return 0;
+ }

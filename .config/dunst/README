@@ -1,0 +1,5 @@
+.service and .timer files are in .config/systemd/user/
+run this command
+systemctl --user enable check-battery-user.timer
+
+to enable low battery notification for dunst and auto hibernation on low battery
