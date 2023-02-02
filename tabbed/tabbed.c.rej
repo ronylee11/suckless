@@ -1,0 +1,19 @@
+--- tabbed.c
++++ tabbed.c
+@@ -152,7 +152,7 @@ static void (*handler[LASTEvent]) (const XEvent *) = {
+ 	[MapRequest] = maprequest,
+ 	[PropertyNotify] = propertynotify,
+ };
+-static int bh, wx, wy, ww, wh;
++static int bh, wx, wy, ww, wh, vbh;
+ static unsigned int numlockmask = 0;
+ static Bool running = True, nextfocus, doinitspawn = True,
+             fillagain = False, closelastclient = False;
+@@ -307,6 +307,6 @@ void
+ drawbar(void) {
+ 	unsigned long *col;
+-	int c, fc, width, n = 0;
++	int c, fc, width, n = 0, nbh, i;
+ 	char *name = NULL;
+ 
+ 	if (nclients == 0) {
